@@ -1,0 +1,31 @@
+Package: interplot
+Title: Calculate intersection of BED format files and draw plots of the result
+Version: 0.1
+Authors@R: 
+    person("Xinkai", "Zhou", , "zhouxinkai9810@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-8791-294X"))
+Description: To analyze peak files in BED format, such as ATAC-seq and ChIP-seq, 
+  it is often necessary to obtain intersection information among these peaks. 
+  The get_combine_result() function enables the retrieval of all possible combinations 
+  of input BED files and their intersections. Additionally, the get_beds() function 
+  assists users in reading the desired files for intersection analysis. Once the 
+  intersection results are calculated, the draw_venn() function can generate a 
+  Venn plot to visualize the intersections, while the draw_upset() function provides 
+  an upset plot for the intersection results. Furthermore, the draw_flowers() function 
+  allows for the computation of merged information from the supplied BED files. 
+  Lastly, the cal_pairwise() function can be used to generate a correlation plot of pairwise 
+  intersections among the provided BED files.
+License: use_gpl3_license()
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    corrplot,
+    ggplot2,
+    ggpolypath,
+    ggthemes,
+    paletteer,
+    plotrix,
+    UpSetR,
+    valr,
+    venn
