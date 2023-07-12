@@ -119,7 +119,7 @@ draw_upset <- function(input_df, bed_list, decreasing=T, angles=45, text_scale=0
 draw_flower <- function(bedpaths, names=NULL, pattern='.bed', start=90, a=0.5, b=2, r=1.5, width=10, height=10, circle_text_cex=1,
                         circle_col=rgb(0, 162, 214, max = 255), ellipse_col=rgb(135, 206, 235, 150, max = 255)){
   beds <- get_bed(bedpaths, names, pattern)
-  single_bed <- get_bed_single(bedpaths, pattern)
+  single_bed <- get_singlebed(bedpaths, pattern)
 
   flower_lables <- unlist(lapply(beds, function(record) record$name))
   flower_values <- unlist(lapply(beds, function(record) dim(record$interval)[1]))
